@@ -1,0 +1,17 @@
+[ERROR|logger.py:360] 2018-11-26 07:46:24,161 > [IconService] 'StandardCrowdSale' object has no attribute 'hello'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_inner_service.py", line 140, in _query
+    params=converted_request['params'])
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 471, in query
+    ret = self._call(context, method, params)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 539, in _call
+    ret_val = handler(context, params)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/icon_service_engine.py", line 583, in _handle_icx_call
+    data)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/iconscore/icon_score_engine.py", line 97, in query
+    return self._call(context, icon_score_address, data)
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/iconscore/icon_score_engine.py", line 129, in _call
+    if func_name is not None and is_func_readonly(func_name):
+  File "/usr/local/lib/python3.6/dist-packages/iconservice/iconscore/icon_score_base.py", line 414, in __is_func_readonly
+    func = getattr(self, func_name)
+AttributeError: 'StandardCrowdSale' object has no attribute 'hello'
